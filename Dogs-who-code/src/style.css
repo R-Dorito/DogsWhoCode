@@ -14,7 +14,7 @@ body{
 
 #navbar header{
   color: black;
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Merriweather', serif;
   text-align: center; 
   padding-right: 5px;
@@ -110,11 +110,7 @@ body{
   }
 }
 
-@media(max-width: 950px){
-  #ribbon-text, #decorative-ribbon{
-    visibility: hidden;
-  }
-}
+
 
 #main-doc{
   background-color: #FFF;
@@ -177,6 +173,7 @@ body{
   margin-bottom: 10px;
 }
 
+
 .dog-card{
   grid-area: article;
   display: grid;
@@ -186,14 +183,11 @@ body{
     "dogImg strengths";
   justify-content: start; 
   align-items: start; 
-  
 }
 
 .dog-img{
   grid-area: dogImg;
-  height: 400px;
   width: 550px;
-  object-fit: cover;
   box-shadow: 3px 3px 8px -1px rgba(0,0,0,0.45);
 }
 
@@ -214,7 +208,7 @@ body{
 
 .main-sub-header{
   font-size: 20px;
-  margin: 0px;
+  margin: 10px 0px;
 }
 
 .main-strength-list, 
@@ -228,17 +222,49 @@ footer{
   display:flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-@media (max-width: 650px){
+@media only screen and (max-width: 650px){
+  #navbar{
+    visibility: hidden;
+  }
   #main-doc, body{
-    margin: 0px;
+    margin: 0px !important;
     border-radius: 0px;
   }
   #main-title-subheader{
     margin-bottom: 0px;
   }
+  .dog-img{
+    width:100%;
+  }
 }
+
+@media only screen and (max-width: 950px){
+  #navbar{
+    visibility: hidden;
+  }
+  #main-doc{
+    margin-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 1250px){
+  .dog-card{
+    grid-template-areas:
+      "dogImg"
+      "description" 
+      "strengths";
+  }
+  .description h3{
+    margin: 10px 0px;
+  }
+  #ribbon-text, #decorative-ribbon{
+    visibility: hidden;
+  }
+}
+
+
 
 
